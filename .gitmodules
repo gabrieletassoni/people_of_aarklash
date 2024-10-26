@@ -1,0 +1,20 @@
+[submodule "vendor/submodules/myiot"]
+	path = vendor/submodules/myiot
+	url = git@devops.bancolini.com:dev/spot/backend/wrappers/myiot.git
+	branch = release/3
+[submodule "vendor/submodules/thecore_ui_rails_admin"]
+	path = vendor/submodules/thecore_ui_rails_admin
+	url = git@github.com:gabrieletassoni/thecore_ui_rails_admin.git
+	branch = release/3
+[submodule "vendor/submodules/thecore_ui_commons"]
+	path = vendor/submodules/thecore_ui_commons
+	url = git@github.com:gabrieletassoni/thecore_ui_commons.git
+	branch = release/3
+[submodule "vendor/submodules/thecore_auth_commons"]
+	path = vendor/submodules/thecore_auth_commons
+	url = git@github.com:gabrieletassoni/thecore_auth_commons.git
+	branch = release/3
+[submodule "vendor/submodules/model_driven_api"]
+	path = vendor/submodules/model_driven_api
+	url = git@github.com:gabrieletassoni/model_driven_api.git
+	branch = release/3

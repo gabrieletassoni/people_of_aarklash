@@ -1,0 +1,4 @@
+it:
+    activerecord:
+        models:
+            thecore_settings/setting: Configurazioni

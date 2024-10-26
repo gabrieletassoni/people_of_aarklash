@@ -1,0 +1,61 @@
+image: gabrieletassoni/vscode-devcontainers-thecore:3
+
+variables:
+  DISABLE_SPRING: 1
+  GITLAB_OAUTH_TARGET: https://oauth2:${GITLAB_PAT}@${GITLAB_HOST}/${CI_PROJECT_PATH}
+
+stages:
+  - build
+  - test
+  - delivery
+  - deploy
+  
+# Caching the built dependencies and assets precompilations to reuse in 
+# later runs of the pipeline to avoid to recompile already compiled things
+cache:
+  key: spot3cache.20240911
+  paths:
+    - vendor/bundle
+    - app/assets
+    - lib/assets
+    - public/assets
+
+build:
+  stage: build
+  only:
+    changes:
+      - version
+    variables:
+      - $CI_COMMIT_TAG == null
+  script:
+  - sudo -E /usr/bin/app-compile.sh
+
+to-dev:
+  stage: delivery
+  dependencies:
+    - build
+  only:
+    changes:
+      - version
+    variables:
+      - $CI_COMMIT_TAG == null
+  cache: []
+  variables:
+    TARGETENV: dev
+  script:
+    - "/usr/bin/docker-deploy.sh"
+
+to-prod:
+  stage: deploy
+  when: manual
+  dependencies:
+    - build
+  only:
+    changes:
+      - version
+    variables:
+      - $CI_COMMIT_TAG == null
+  allow_failure: false
+  cache: []
+  script:
+    - "/usr/bin/docker-deploy.sh"

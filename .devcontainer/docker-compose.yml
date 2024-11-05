@@ -17,7 +17,7 @@ services:
     network_mode: service:db
     environment:
       REDIS_URL: redis://db:6379/1
-      DATABASE_URL: postgres://postgres:postgres@db:5432/mytrack_dev?pool=5
+      DATABASE_URL: postgres://postgres:postgres@db:5432/people_of_aarklash?pool=5
 
     # Uncomment the next line to use a non-root user for all processes.
     # user: vscode

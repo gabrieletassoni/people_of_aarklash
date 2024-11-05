@@ -36,7 +36,8 @@
 				"anweber.vscode-httpyac",
 				"mhutchie.git-graph",
 				"/etc/thecore/thecore.vsix",
-				"Shopify.ruby-lsp"
+				"Shopify.ruby-lsp",
+				"tomoki1207.pdf"
 			]
 		}
 	},

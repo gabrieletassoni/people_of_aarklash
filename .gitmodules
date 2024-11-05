@@ -1,7 +1,3 @@
-[submodule "vendor/submodules/myiot"]
-	path = vendor/submodules/myiot
-	url = git@devops.bancolini.com:dev/spot/backend/wrappers/myiot.git
-	branch = release/3
 [submodule "vendor/submodules/thecore_ui_rails_admin"]
 	path = vendor/submodules/thecore_ui_rails_admin
 	url = git@github.com:gabrieletassoni/thecore_ui_rails_admin.git
@@ -18,3 +14,6 @@
 	path = vendor/submodules/model_driven_api
 	url = git@github.com:gabrieletassoni/model_driven_api.git
 	branch = release/3
+[submodule "vendor/submodules/people_of_aarklash_models"]
+	path = vendor/submodules/people_of_aarklash_models
+	url = git@github.com:gabrieletassoni/people_of_aarklash_models.git
